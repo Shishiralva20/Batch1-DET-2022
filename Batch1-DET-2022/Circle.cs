@@ -1,22 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Batch1_DET_2022
+﻿namespace Batch1_DET_2022
 {
-    internal class Circle
+    public class Circle
     {
-        int radius;
-
-        public Circle(int radius)
+        double r;
+        public void SetRadius(double r)
         {
-            this.radius = radius;
+            this.r = r;
         }
-        public Double AreaOfCircle()
+        public double GetRadius()
         {
-            return Math.PI * radius * radius;
+            return r;
+        }
+        public double GetArea()
+        {
+            return Math.PI * r * r;
+        }
+        public double GetCircum()
+        {
+            return 2 * Math.PI * r;
+        }
+        public double GetDiameter()
+        {
+            return 2 * r;
         }
     }
 }

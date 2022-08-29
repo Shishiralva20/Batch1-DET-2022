@@ -10,8 +10,18 @@ namespace Batch1_DET_2022
     {
         public static void Main()
         {
-            Circle e = new Circle(20);
-            Console.WriteLine($"The area of Circle = {e.AreaOfCircle()}");
+            Circle c = new Circle();
+            Console.WriteLine("Enter Radius Value");
+            double r = int.Parse(Console.ReadLine());
+            c.SetRadius(r);
+            double rad = c.GetRadius();
+            Console.WriteLine(rad);
+            double area = c.GetArea();
+            Console.WriteLine(area);
+            double diam = c.GetDiameter();
+            Console.WriteLine(diam);
+            double circ = c.GetCircum();
+            Console.WriteLine(circ);
         }
     }
 }
