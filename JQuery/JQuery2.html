@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#test').on('click', function () {
+                alert('Someone clicked me');
+            });
+            $('#test2').on('click', function () {
+                $('#test').click();
+            });
+            $('div').hover(
+                function () { $(this).css('background-color', '#00FF99'); },
+                function () { $(this).css('background-color', '#FFFFFF'); }
+            );
+            $('#test3').click(function () {
+                alert('ID test3 clicked and I will ' +
+                    'now turn off events for the div with an ID of test.');
+                $('#test').off();
+
+
+                $("*").click(function (event) {
+                    alert("X=" + event.pageX + " \n Y=" + event.pageY);
+                });
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+
+    <div id="test">
+        click me
+    </div>
+
+    <div id="test2">
+        test2
+    </div>
+    <div id="test3">
+        This is test 3
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .highlight {
+            background: yellow;
+        }
+    </style>
+
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+         $('.state').each(function(i) {
+       this.title = 'This Index = ' + i;
+       $(this).prepend('<span class="lz">' + (i+1) + '. </span>');
+       $(this).append('<span class="cn">, USA</span>');
+       $("#ri").click(function(){
+       $(".cn, .lz").remove();
+   });
+       });
+       $("img").attr({
+ title: "github",
+ border: "5",
+ style: "border-color:red"
+ });
+$("#ri").hover(function(){ $(this).toggleClass("highlight"); });
+    });
+    </script>
+</head>
+<body>
+    <div class="state">Alabama</div>
+    <div class="state">Alaska</div>
+    <div class="state">Arizona</div>
+    <div class="state">Arkansas</div>
+    <div class="state">California</div>
+    <div class="state">Colorado</div>
+    <div class="state">Connecticut</div>
+    <div class="state">Delaware</div>
+    <div class="state">Florida</div>
+    <div class="state">Georgia</div>
+    <div>
+        <span id="ri" style="text‐decoration:underline; cursor:pointer">
+            Remove Nodes
+        </span>
+    </div>
+
+    <img src="https://img.krishijagran.com/media/74639/b.jpg">
+</body>
+</html>
