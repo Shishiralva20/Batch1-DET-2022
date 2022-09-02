@@ -11,60 +11,93 @@ using System.Threading.Tasks;
 
 namespace Batch1_DET_2022
 {
-    internal class LinqLearning
+    internal class LinqLearning1
     {
-        /*//**        public static void Main()
-                {
-                    string[] names = { "John", "Peter", "Jacob", "Harry", "Jackson" };
-                    var result = names.Reverse();
-                    Console.WriteLine(result);
-
-                }*//*
-        private static void Main()
+        public static void Main()
         {
-     List<string> words = new List<string> { "basket", "blueberry", "chimpanze", "abacus", "banana", "apple", "cheese" };
+            LinqLearning();
+        }
+        private static void LinqLearning()
+        {
+            //1.DATA SOURCE
+            List<string> place = new List<string>();
+            place.Add("Mangalore");
+            place.Add("Bangalore");
+            place.Add("Mysore");
+            place.Add("Mumbai");
 
-            //var wordGroups = from w in words
-            //                  group w by w[0] into g
-            //                  select new { FirstLetter = g.Key, Words = g};
 
-            var wordGroups = words.GroupBy(x => x[0]).Select
-                (y => new { FirstLetter = y.Key, Words = y });
-            foreach (var item in wordGroups)
+            //2.QUERY CREATION
+            //DEFERRED EXECUTION:
+            //var numQuery = from num in numbers where num>100 select num;
+            var PlaceQuery = from city in place select city;
+            //EARLY EXECUTION:
+            //var numQuery = (from num in numbers select num).ToList();
+            place.Add("Delhi");
+            place.Add("Punjab");
+
+            //3.QUERY EXECUTION
+            foreach (string city in PlaceQuery)
             {
-
-                Console.WriteLine("Words that start with the" + "letter '{0}':", item.FirstLetter);
-
-                foreach (var w in item.Words)
-                {
-                    Console.WriteLine(w);
-                }
+                Console.WriteLine($"{city}");
             }
         }
     }
+}
+
+/*   internal class LinqLearning
+   {*/
+
+/*                    string[] names = { "John", "Peter", "Jacob", "Harry", "Jackson" };
+        var result = names.Reverse();
+        Console.WriteLine(result);*/
+
+/* }*/
+/*private static void Main1()
+{
+    List<string> words = new List<string> { "basket", "blueberry", "chimpanze", "abacus", "banana", "apple", "cheese" };
+
+    //var wordGroups = from w in words
+    //                  group w by w[0] into g
+    //                  select new { FirstLetter = g.Key, Words = g};
+
+    var wordGroups = words.GroupBy(x => x[0]).Select
+        (y => new { FirstLetter = y.Key, Words = y });
+    foreach (var item in wordGroups)
+    {
+
+        Console.WriteLine("Words that start with the" + "letter '{0}':", item.FirstLetter);
+
+        foreach (var w in item.Words)
+        {
+            Console.WriteLine(w);
+        }
     }*/
-        public class EmployeeLinq
+/*    }
+}*/
+/*    }
+    public class EmployeeLinq
         {
             public EmployeeLinq()
             {
 
             }
 
-            public Employee(int id, string name, string dept)
+*//*            public Employee(int id, string name, string dept)
             {
                 this.ID = id;
                 this.Name = name;
                 this.Dept = dept;
 
-            }
+            }*//*
             public int ID { get; set; }
             public string Name { get; set; }
             public string Dept { get; set; }
 
-        }
+        
     }
-}
-        public static void Main()
+}*/
+/*        public static void Main()
         {
             EmployeeLinq e = new EmployeeLinq();
         }
@@ -81,9 +114,7 @@ namespace Batch1_DET_2022
         Console.WriteLine("Name is " +)    
     }
 
-}
-
-
+}*/
 
 
 
