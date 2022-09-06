@@ -6,11 +6,15 @@
     <RootNamespace>Batch1_DET_2022</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Batch1_DET_2022.DatabaseFirst</StartupObject>
+    <StartupObject>Batch1_DET_2022.CodeFirstApproach</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Paramdemo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +31,11 @@ namespace Batch1_DET_2022
         {
             return $"{Name} subscribed SMS notifications";
         }
+
+        public static implicit operator Author(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class SITLAuthor : Author, IEMail
@@ -54,3 +59,4 @@ namespace Batch1_DET_2022
         }
     }
 }
+*/

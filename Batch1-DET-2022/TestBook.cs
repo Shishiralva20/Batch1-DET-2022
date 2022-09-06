@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +8,14 @@ namespace Batch1_DET_2022
 {
     internal class Book
     {
+        internal int price;
+
         public string Name { get; set; }
         public int Price { get; set; }
         public int Qty { get; set; }
         public Author author { get; set; }  //containment
+        public int BookID { get; internal set; }
+        public string BookName { get; internal set; }
 
         public override string ToString()
         {
@@ -39,3 +43,4 @@ namespace Batch1_DET_2022
         }
     }
 }
+*/
